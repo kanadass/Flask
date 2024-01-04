@@ -1,0 +1,74 @@
+@baseUrl = http://127.0.0.1:5000
+
+#user
+
+POST {{baseUrl}}/user/
+Content-Type: application/json
+
+{
+  "name": "Gogi",
+  "password": "dgh8435fks"
+}
+
+###
+
+
+GET {{baseUrl}}/user/6
+Content-Type: application/json
+
+###
+
+PATCH {{baseUrl}}/user/6
+Content-Type: application/json
+
+{
+  "name": "Rreaena"
+}
+
+###
+
+DELETE {{baseUrl}}/user/10
+Content-Type: application/json
+
+
+###
+
+
+
+
+
+
+#Advertisement
+
+# Создание объявления
+POST {{baseUrl}}/ad/
+Content-Type: application/json
+
+{
+  "title": "New Adgerdfeg111",
+  "description": "Descgefefwrription of the new ad",
+  "owner_id": 10
+}
+
+###
+
+# Получение информации об объявлении
+GET {{baseUrl}}/ad/1
+Content-Type: application/json
+
+###
+
+# Редактирование информации об объявлении
+PATCH {{baseUrl}}/ad/1
+Content-Type: application/json
+
+{
+  "title": "Updatesdcfad Ad",
+  "description": "Updated afaedescription"
+}
+
+###
+
+# Удаление объявления
+DELETE {{baseUrl}}/ad/1
+Content-Type: application/json 
